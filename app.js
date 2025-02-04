@@ -270,5 +270,5 @@ This function should return the count of arguments passed to it when called.
 Complete the exercise in the space below:
 */
 let arrNum;
- const numArgs = (...arrNum) => arrNum.length;
+ const numArgs = (arrNum) => arrNum.length;
 console.log('Exercise 12 Result:', numArgs(1, 2, 3, 4));
