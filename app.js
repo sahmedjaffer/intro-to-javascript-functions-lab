@@ -285,7 +285,7 @@ const createUsername = (fName,lName) =>{
 return `${fName.substring(0,3)}${lName.substring(0,3)}${fName.length+lName.length}`
 }
 
-console.log('Exercise 11 Result:', createUsername("Samantha", "Green"));
+console.log('Exercise 11 Result:', createUsername("Sayed Mustafa", "Sharaf"));
 
 
 
