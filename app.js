@@ -8,15 +8,13 @@ If they're equal, return either one.
 Exercise 1 has been completed for you:
 */
 
-const maxOfTwoNumbers = (x, y) => {
+const maxOfTwoNumbers = (x, y) => x>=y ? x : y;
 /*    if (x >= y) {
       return x;
     } else {
       return y;
     }
 */
-return x>=y ? x : y;
-  }
   
   console.log('Exercise 1 Result:', maxOfTwoNumbers(3, 9));
 
@@ -33,7 +31,7 @@ Example: isAdult(21) should return 'Adult'.
 Complete the exercise in the space below:
 */
 
-const isAdult= age => {
+const isAdult= age => age >= 18 ? "Adult" : "Minor";
 /*
     if (age => 18){
        return ageStatus= 'Adult';
@@ -43,13 +41,7 @@ const isAdult= age => {
     }
 */
 
- return age >= 18 ? "Adult" : "Minor";
-}
-
-
 console.log('Exercise 2 Result:', isAdult(21));
-
-
 
 
 /*
@@ -64,9 +56,8 @@ Example: isCharAVowel('a') should return true.
 
 Complete the exercise in the space below:
 */
-
-const isCharAVowel= char => {
-    const vowels = 'aeiou'
+const vowels = 'aeiou'
+const isCharAVowel= char => vowels.includes(char) ? true : false; 
     /*
     if (char === "a" || char === "e" || char === "i"||char === "o"||char === "u"){
         return true;
@@ -75,8 +66,7 @@ const isCharAVowel= char => {
         return false;
     }
     */
-   return vowels.includes(char) ? true : false;
-}
+   
 console.log('Exercise 3 Result:', isCharAVowel("a"));
 
 
@@ -96,7 +86,7 @@ const generateEmail=(name,domain)=> `${name}@${domain}`;
 
 console.log('Exercise 4 Result:', generateEmail("johnsmith", "example.com"));
 
-/*
+ /*
 Exercise 5: greetUser()
 
 Define a function called greetUser. It should take a name and a 
