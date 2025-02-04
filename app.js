@@ -32,12 +32,16 @@ Complete the exercise in the space below:
 */
 
 const isAdult=(age)=>{
+/*
     if (age => 18){
        return ageStatus= 'Adult';
     }
     else{
         return ageStatus='Minor';
     }
+*/
+
+ return age >= 18 ? "Adult" : "Minor";
 }
 
 
@@ -60,12 +64,16 @@ Complete the exercise in the space below:
 */
 
 const isCharAVowel=(char)=>{
+    const vowels = 'aeiou'
+    /*
     if (char === "a" || char === "e" || char === "i"||char === "o"||char === "u"){
         return true;
     }
     else{
         return false;
     }
+    */
+   return vowels.includes(char) ? true : false;
 }
 console.log('Exercise 3 Result:', isCharAVowel("a"));
 
@@ -126,14 +134,16 @@ Complete the exercise in the space below:
 
 
 const maxOfThree = (num1,num2,num3) =>{
-    let maxNum;
-   if (num1>num2 && num1>num3){
+   /*
+    if (num1>num2 && num1>num3){
      return num1;
    }else if (num2 > num1 && num2 > num3){
     return num2
    } else {
     return num3;
    } 
+    */
+   return num1>num2 && num1>num3 ? num1 : num2 > num1 && num2 > num3 ? num2 : num3;
 }
 
 console.log('Exercise 6 Result:', maxOfThree(5, 10, 8));
@@ -176,7 +186,7 @@ Complete the exercise in the space below:
 */
 
 const convertTemperature = (timp, timpType) =>{
-
+/*
     if (timpType==='C'||timpType==='c'){
         // (0°C × 9/5) + 32 
         return (timp* 9/5)+32;
@@ -184,6 +194,10 @@ const convertTemperature = (timp, timpType) =>{
         // (0°F − 32) × 5/9 
         return (timp-32)*5/9;
     }
+*/
+    return timpType.toUpperCase() ==='C' ? (timp* 9/5)+32 : (timp-32)*5/9;
+
+
 }
 
 console.log('Exercise 8 Result:', convertTemperature(32, "C"));
@@ -221,7 +235,5 @@ switch(operation){
         return 0
 }
 }
-
-
 console.log('Exercise 9 Result:', basicCalculator(10, 5, "subtract"));
 
