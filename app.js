@@ -269,6 +269,6 @@ This function should return the count of arguments passed to it when called.
 
 Complete the exercise in the space below:
 */
-const numArgs = (number1,number2,number3,number4) => numArgs.length
-
-console.log('Exercise 12 Result:', numArgs(1, 2, 3, 4));
+let arrNum;
+ const numArgs = (...arrNum) => arrNum.length;
+console.log('Exercise 12 Result:', numArgs(1, 2, 3, 4,5,6,7,8,9));
