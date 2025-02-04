@@ -271,4 +271,4 @@ Complete the exercise in the space below:
 */
 let arrNum;
  const numArgs = (...arrNum) => arrNum.length;
-console.log('Exercise 12 Result:', numArgs(1, 2, 3, 4,5,6,7,8,9));
+console.log('Exercise 12 Result:', numArgs(1, 2, 3, 4));
