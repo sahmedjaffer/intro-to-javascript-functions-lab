@@ -33,7 +33,7 @@ Example: isAdult(21) should return 'Adult'.
 Complete the exercise in the space below:
 */
 
-const isAdult=(age)=>{
+const isAdult= age => {
 /*
     if (age => 18){
        return ageStatus= 'Adult';
@@ -65,7 +65,7 @@ Example: isCharAVowel('a') should return true.
 Complete the exercise in the space below:
 */
 
-const isCharAVowel=(char)=>{
+const isCharAVowel= char => {
     const vowels = 'aeiou'
     /*
     if (char === "a" || char === "e" || char === "i"||char === "o"||char === "u"){
@@ -92,15 +92,9 @@ should return 'johnsmith@example.com'.
 Complete the exercise in the space below:
 */
 
-const generateEmail=(name,domain)=>{
-return `${name}@${domain}`;
-}
-
+const generateEmail=(name,domain)=> `${name}@${domain}`;
 
 console.log('Exercise 4 Result:', generateEmail("johnsmith", "example.com"));
-
-
-
 
 /*
 Exercise 5: greetUser()
@@ -114,14 +108,9 @@ Example: greetUser('Sam', 'morning') should return "Good morning, Sam!"
 Complete the exercise in the space below:
 */
 
-const greetUser=(user,greeting)=>{
-return `Good ${greeting}, ${user}`;
-
-}
+const greetUser=(user,greeting)=> `Good ${greeting}, ${user}`;
 
 console.log('Exercise 5 Result:', greetUser("Sam", "morning"));
-
-
 
 /*
 Exercise 6: maxOfThree()
@@ -135,24 +124,21 @@ Complete the exercise in the space below:
 */
 
 
-const maxOfThree = (num1,num2,num3) =>{
+const maxOfThree = (num1,num2,num3) =>  num1>num2 && num1>num3 ? num1 : num2 > num1 && num2 > num3 ? num2 : num3;
+
    /*
+   const maxOfThree = (num1,num2,num3) =>{
     if (num1>num2 && num1>num3){
      return num1;
    }else if (num2 > num1 && num2 > num3){
     return num2
    } else {
     return num3;
-   } 
+} }
     */
-   return num1>num2 && num1>num3 ? num1 : num2 > num1 && num2 > num3 ? num2 : num3;
-}
+
 
 console.log('Exercise 6 Result:', maxOfThree(5, 10, 8));
-
-
-
-
 
 /*
 Exercise 7: calculateTip()
@@ -165,10 +151,8 @@ Example: calculateTip(50, 20) should return 10.
 
 Complete the exercise in the space below:
 */
- const calculateTip=(billAmount, tipPercentage)=>{
-   // tipPercentage=0.2;
-    return billAmount*(tipPercentage/100);
- }
+ const calculateTip=(billAmount, tipPercentage)=> billAmount*(tipPercentage/100);
+ 
 console.log('Exercise 7 Result:', calculateTip(50, 20));
 
 
@@ -187,22 +171,21 @@ Example: convertTemperature(32, 'F') should return 0 (Celsius).
 Complete the exercise in the space below:
 */
 
-const convertTemperature = (timp, timpType) =>{
+const convertTemperature = (timp, timpType) => timpType.toUpperCase() ==='C' ? (timp* 9/5)+32 : (timp-32)*5/9;
 /*
+const convertTemperature = (timp, timpType) =>{
     if (timpType==='C'||timpType==='c'){
         // (0°C × 9/5) + 32 
         return (timp* 9/5)+32;
     } else {
         // (0°F − 32) × 5/9 
         return (timp-32)*5/9;
-    }
+}}
 */
-    return timpType.toUpperCase() ==='C' ? (timp* 9/5)+32 : (timp-32)*5/9;
-
-
-}
-
+    
 console.log('Exercise 8 Result:', convertTemperature(32, "C"));
+
+
 
 /*
 Exercise 9: basicCalculator()
@@ -219,7 +202,9 @@ Example: basicCalculator(10, 5, 'subtract') should return 5.
 
 Complete the exercise in the space below:
 */
-const basicCalculator=(n1,n2,operation)=>{
+
+
+/* const basicCalculator=(n1,n2,operation)=>{
 switch(operation){
     case ('subtract'):
         return n1-n2;
@@ -237,6 +222,8 @@ switch(operation){
         return 0
 }
 }
+*/
+const basicCalculator=(n1,n2,operation)=> operation ==='subtract' ? n1-n2 : operation ==='add' ? n1+n2 : operation ==='multiply' ? n1*n2 : operation ==='divide' ? n1/n2 : 0; 
 console.log('Exercise 9 Result:', basicCalculator(10, 5, "subtract"));
 
 
@@ -255,10 +242,7 @@ Example: calculateGrade(100) should return A.
 
 Complete the exercise in the space below:
 */
-const calculateGrade =(score)=> {
- return score >= 90 ? 'A' : score >= 80 && score < 90 ? 'B' : score >= 70 && score < 80 ? 'C' : score >= 60 && score < 70 ? 'D' : 'F';
-}
-
+const calculateGrade =(score)=> score >= 90 ? 'A' : score >= 80 && score < 90 ? 'B' : score >= 70 && score < 80 ? 'C' : score >= 60 && score < 70 ? 'D' : 'F';
 
 console.log('Exercise 10 Result:', calculateGrade(85));
 
@@ -281,12 +265,9 @@ Example: createUsername('Samantha', 'Green') should return 'SamGre13'.
 Complete the exercise in the space below:
 */
 
-const createUsername = (fName,lName) =>{
-return `${fName.substring(0,3)}${lName.substring(0,3)}${fName.length+lName.length}`
-}
+const createUsername = (fName,lName) => `${fName.substring(0,3)}${lName.substring(0,3)}${fName.length+lName.length}`
 
-console.log('Exercise 11 Result:', createUsername("Sayed Mustafa", "Sharaf"));
-
+console.log('Exercise 11 Result:', createUsername("Samantha", "Green"));
 
 
 
@@ -298,9 +279,6 @@ This function should return the count of arguments passed to it when called.
 
 Complete the exercise in the space below:
 */
-const numArgs = (number1,number2,number3,number4)=>{
-return numArgs.length
-}
-
+const numArgs = (number1,number2,number3,number4) => numArgs.length
 
 console.log('Exercise 12 Result:', numArgs(1, 2, 3, 4));
