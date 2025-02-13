@@ -164,7 +164,7 @@ Complete the exercise in the space below:
 const convertTemperature = (timp, timpType) => 
       timpType.toUpperCase() ==='C' ? ((timp* 9/5)+32)
     : timpType.toUpperCase() ==='F' ? ((timp-32)*5/9) 
-    : console.log(`${timpType} is Not Valid`);
+    : `${timpType} is Not Valid`;
 /*
 const convertTemperature = (timp, timpType) =>{
     if (timpType==='C'||timpType==='c'){
@@ -178,7 +178,7 @@ const convertTemperature = (timp, timpType) =>{
     
 console.log('Exercise 8 Result:', convertTemperature(32, "c"));
 console.log('Exercise 8 Result:', convertTemperature(32, "f"));
-//console.log('Exercise 8 Result:', convertTemperature(78, "g"));
+console.log('Exercise 8 Result:', convertTemperature(78, "g"));
 
 
 /*
