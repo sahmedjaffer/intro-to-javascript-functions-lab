@@ -161,20 +161,24 @@ Example: convertTemperature(32, 'F') should return 0 (Celsius).
 Complete the exercise in the space below:
 */
 
-const convertTemperature = (timp, timpType) => timpType.toUpperCase() ==='C' ? (timp* 9/5)+32 : (timp-32)*5/9;
+const convertTemperature = (timp, timpType) => 
+      timpType.toUpperCase() ==='C' ? ((timp* 9/5)+32)
+    : timpType.toUpperCase() ==='F' ? ((timp-32)*5/9) 
+    : console.log(`${timpType} is Not Valid`);
 /*
 const convertTemperature = (timp, timpType) =>{
     if (timpType==='C'||timpType==='c'){
-        // (0°C × 9/5) + 32 
+         (0°C × 9/5) + 32 
         return (timp* 9/5)+32;
     } else {
-        // (0°F − 32) × 5/9 
+         (0°F − 32) × 5/9 
         return (timp-32)*5/9;
 }}
 */
     
-console.log('Exercise 8 Result:', convertTemperature(32, "C"));
-
+console.log('Exercise 8 Result:', convertTemperature(32, "c"));
+console.log('Exercise 8 Result:', convertTemperature(32, "f"));
+//console.log('Exercise 8 Result:', convertTemperature(78, "g"));
 
 
 /*
